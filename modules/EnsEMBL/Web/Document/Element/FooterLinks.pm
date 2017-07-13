@@ -28,8 +28,8 @@ sub content {
   return qq(
     <div class="twocol-right right">
       <a href="https://github.com/molluscdb/molluscdb-plugin/issues" title="report an issue">report an issue</a> |
-      <a href="http://genomehubs.org/" title="genomehubs.org">genomehubs.org</a> |
       <a href="mailto:molluscdb@gmail.com" title="molluscdb@gmail.com">contact us</a> |
+      <a href="http://genomehubs.org/" title="genomehubs.org">genomehubs.org</a> |
       <a href="http://www.ensembl.org/" title="ensembl.org"><img style="height:auto;margin-top:-5px;background:none;border:none;" src="/i/empowered.png"></img></a>
     </div>)
   ;
