@@ -108,7 +108,7 @@ body.ie6 #masthead div.search_holder              { width: 320px; left: 100%; ma
 
 /* Footer */
 
-#footer, #wide-footer         { clear: both; text-align: center; font-size: 0.9em; margin: 0 16px; position:absolute; bottom: 0;}
+#footer, #wide-footer         { clear: both; text-align: center; font-size: 0.9em; margin: 0 16px; position:relative; bottom: 0;}
 #footer                       { margin-left: 240px; }
 @media print {
   #footer                     { margin-left: 16px; }
