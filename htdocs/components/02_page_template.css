@@ -93,6 +93,7 @@ body.ie67 #masthead                               { z-index: 9999; }
 body.ie67 #masthead .tabs_holder                  { z-index: -1; }
 body.ie67 #masthead div.more a.open               { margin-top: -2px; }
 
+ 
 body.ie6 #masthead div.more                       { margin-left: 3px; }
 body.ie6 #masthead div.dropdown.species           { width: 610px; }
 body.ie6 #masthead div.dropdown.species ul li     { width: 180px; }
@@ -108,7 +109,7 @@ body.ie6 #masthead div.search_holder              { width: 320px; left: 100%; ma
 
 /* Footer */
 
-#footer, #wide-footer         { clear: both; text-align: center; font-size: 0.9em; margin: 0 16px; position: bottom; right: 0; bottom: 0; left: 0; }
+#footer, #wide-footer         { clear: both; text-align: center; font-size: 0.9em; margin: 0 16px; position: fixed; right: 0; bottom: 0; left: 0; }
 #footer                       { margin-left: 240px; }
 @media print {
   #footer                     { margin-left: 16px; }
