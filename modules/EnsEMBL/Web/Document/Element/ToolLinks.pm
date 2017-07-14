@@ -34,7 +34,7 @@ sub content {
       push @links,   '<a class="constant" href="/Multi/enasearch">Sequence Search</a>';
   }
 
-## BEGIN LEPBASE MODIFICATIONS...
+## BEGIN MDB MODIFICATIONS...
   my $sd    = $self->species_defs;
   my $blast_url = $self->hub->species_defs->BLAST_URL;
   my $download_url = $self->hub->species_defs->DOWNLOAD_URL;
