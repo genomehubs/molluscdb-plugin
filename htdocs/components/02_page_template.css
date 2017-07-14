@@ -22,7 +22,6 @@
 #widemain { margin-left: 0; border: 0; position: relative; padding: 16px 0 0; }
 body.static #main { margin-left: 224px; border: 0; position: relative; padding: 16px 0 0; }
 body.static #widemain { margin-left: 0; }
-body { margin:0; }
 
 /* WHY IS THIS DIFFERENT FROM .static ? */
 #static    { margin: 0 16px; }
