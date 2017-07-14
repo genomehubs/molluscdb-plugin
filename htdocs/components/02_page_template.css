@@ -116,4 +116,4 @@ body.ie6 #masthead div.search_holder              { width: 320px; left: 100%; ma
 }
 #footer img, #wide-footer img { vertical-align: middle; height: 20px }
 #footer p, #wide-footer p { padding: 0; margin: 16px 0; }
-#footer, #wide-footer         { position: absolute; right: 0; bottom: 0; left: 0;}
+#footer, #wide-footer         { position: fixed; right: 0; bottom: 0; left: 0;}
