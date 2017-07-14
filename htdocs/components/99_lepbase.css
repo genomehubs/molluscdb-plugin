@@ -215,6 +215,7 @@ div#wide-footer, div#footer {
   margin: 10px 0px;
   padding: 16px 10px;
   color: [[MH_TEXT]];
+  position: absolute;
 }
 
 div#wide-footer a, div#footer a {
