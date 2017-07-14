@@ -111,6 +111,10 @@ body.ie6 #masthead div.search_holder              { width: 320px; left: 100%; ma
 
 #footer, #wide-footer         { clear: both; text-align: center; font-size: 0.9em; margin: 0 16px; }
 #footer                       { margin-left: 240px; }
+#footer {
+    position:fixed;
+    bottom:0;
+}
 @media print {
   #footer                     { margin-left: 16px; }
 }
