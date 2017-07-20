@@ -1,0 +1,12 @@
+#min_width_container {
+  min-height: calc(100vh - 91px);
+  padding-bottom: 91px;
+}
+
+div#wide-footer, div#footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin-bottom: 0;
+}
