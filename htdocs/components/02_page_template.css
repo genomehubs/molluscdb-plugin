@@ -117,9 +117,6 @@ body.ie6 #masthead div.search_holder              { width: 320px; left: 100%; ma
 #footer p, #wide-footer p { padding: 0; margin: 16px 0; }
 
 footer, #wide-footer { 
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
+  position: sticky;
+  top: 0;
 }
