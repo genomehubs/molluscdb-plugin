@@ -22,7 +22,7 @@
 #widemain { margin-left: 0; border: 0; position: relative; padding: 16px 0 0; }
 body.static #main { margin-left: 224px; border: 0; position: relative; padding: 16px 0 0; }
 # Keep footer at the bottom!
-body.static #widemain { margin-left: 0; min-height: 100vh;}
+body.static #widemain { margin-left: 0; min-height: 100vh; height: 100vh;}
 
 /* WHY IS THIS DIFFERENT FROM .static ? */
 #static    { margin: 0 16px; }
