@@ -1,6 +1,6 @@
 #min_width_container {
-  min-height: calc(100vh - 91px);
-  padding-bottom: 91px;
+  min-height: calc(100vh - 200px);
+  padding-bottom: 200px;
 }
 
 div#wide-footer, div#footer {
