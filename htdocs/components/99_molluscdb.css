@@ -1,3 +1,5 @@
+/* Keep footer at the bottom */
+
 #min_width_container {
   min-height: calc(100vh - 200px);
   padding-bottom: 200px;
