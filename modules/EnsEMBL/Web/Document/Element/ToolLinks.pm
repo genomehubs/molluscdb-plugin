@@ -41,7 +41,7 @@ sub content {
   my $project_url = $self->hub->species_defs->PROJECT_URL;
   my $project_url_title = $self->hub->species_defs->PROJECT_URL_TITLE;
   my $help_url = $self->hub->species_defs->HELP_URL;
-  my $browser_url = $self->hub->species_defs->PROJECT_URL;
+  my $browser_url = $self->hub->species_defs->BROWSER_URL;
   push @links,   '<a href="'.$browser_url.'" title="Browser"><div class="lb-menu-category"><img title="tools" src="/i/tools-icon.png" class="lb-menu-linkicon"/>Browser</div></a>';
   push @links,   '<a href="'.$blast_url.'" title="Blast"><div class="lb-menu-category"><img title="tools" src="/i/tools-icon.png" class="lb-menu-linkicon"/>Blast</div></a>';
   push @links,   '<a href="'.$download_url.'" title="Download"><div class="lb-menu-category"><img title="download" src="/i/download-icon.png" class="lb-menu-linkicon"/>Downloads</div></a>';
