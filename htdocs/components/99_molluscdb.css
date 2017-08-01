@@ -13,9 +13,56 @@ div#wide-footer, div#footer {
   margin-bottom: 0;
 }
 
-div.lb-tools-holder {
-    left: 30px;
-    position: absolute;
-    width: 500px;
-    top: 11px;
+/* Keep menu on same position as in Blast and Downloads */
+
+.lb-navbar {
+  border-bottom: none;
+  background-color: #333333;
+  height: 80px;
 }
+div.lb-menu-category {
+    float: left;
+    margin-left: 4px;
+    background-color: #fff;
+    padding: 5px;
+    border: 2px solid #333;
+    border-radius: 4px;
+    color: #333;
+    line-height: 22px;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+a div.lb-menu-category:hover {
+    border: 2px solid #64A02C;
+}
+
+img.lb-menu-linkicon {
+    max-width: 20px;
+    max-height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.lb-tools-holder {
+  padding-top:24px;
+}
+
+.lb-logo {
+    width: 160px;
+    height: 50px;
+    margin-top: 11px;
+    margin-right: 49px;
+    margin-left:12px;
+    float: left;
+}
+
+#content-header a,
+#content-header a:visited,
+#content-footer a,
+#content-footer a:visited {
+    color: #64A02C;
+}
+
