@@ -16,7 +16,7 @@ div#wide-footer, div#footer {
 /* Keep headers at ensembl in the same position as in downloads and blast */
 
 div.lb-tools-holder { 
-  left: 40px;    
+  left: 45px;    
   position: absolute;    
   width: 500px;    
   top: 11px;
