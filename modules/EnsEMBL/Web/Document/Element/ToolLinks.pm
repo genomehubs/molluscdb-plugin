@@ -44,7 +44,7 @@ sub content {
   my $browser_url = $self->hub->species_defs->BROWSER_URL;
   push @links,   '<a href="'.$browser_url.'" title="Browser"><div class="lb-menu-category"><img title="tools" src="/i/tools-icon.png" class="lb-menu-linkicon"/>Browser</div></a>';
   push @links,   '<a href="'.$blast_url.'" title="Blast"><div class="lb-menu-category"><img title="tools" src="/i/tools-icon.png" class="lb-menu-linkicon"/>Blast</div></a>';
-  push @links,   '<a href="'.$download_url.'" title="Download"><div class="lb-menu-category"><img title="download" src="/i/download-icon.png" class="lb-menu-linkicon"/>Downloads</div></a>';
+  push @links,   '<a href="'.$download_url.'" title="Download"><div class="lb-menu-category"><img title="download" src="/i/download-icon.png" class="lb-menu-linkicon"/>Download</div></a>';
   #push @links,   '<a href="'.$project_url.'" title="$project_url_title"><div class="lb-menu-category"><img title="'.$project_url_title.'" src="/i/project-icon.png" class="lb-menu-linkicon"/>'.$project_url_title.'</div></a>';
   #push @links,   '<a href="'.$help_url.'" title="Help"><div class="lb-menu-category"><img title="lepbase" src="/i/help-icon.png" class="lb-menu-linkicon"/>Help</div></a>';
 
