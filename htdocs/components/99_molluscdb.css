@@ -21,6 +21,4 @@ div.lb-tools-holder {
 
 /* Keep logo at ensembl in the same position as in downloads and blast */
 
-.logo_holder {
-  top: 11px;
-}
+#masthead .logo_holder { top: 11px;}
