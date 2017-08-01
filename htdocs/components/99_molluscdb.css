@@ -21,7 +21,6 @@ div#wide-footer, div#footer {
   background-color: #333333;
   height: 80px;
 }
-*/
 
 div.lb-menu-category {
     float: left;
@@ -36,6 +35,7 @@ div.lb-menu-category {
     font-size: 14px;
     font-family: sans-serif;
 }
+*/
 
 a div.lb-menu-category:hover {
     border: 2px solid #64A02C;
