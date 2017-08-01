@@ -12,3 +12,17 @@ div#wide-footer, div#footer {
   left: 0;
   margin-bottom: 0;
 }
+
+div.lb-menu-category {
+    float: left;
+    margin-left: 4px;
+    background-color: #fff;
+    padding: 5px;
+    border: 2px solid #333;
+    border-radius: 4px;
+    color: #333;
+    line-height: 22px;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: sans-serif;
+}
