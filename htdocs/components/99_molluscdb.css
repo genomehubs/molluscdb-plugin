@@ -19,6 +19,4 @@ div.lb-tools-holder {
   left: 49px;    
 }
 
-.logo_holder {    
-  top: 20px;
-}
+.lb-logo { width: 160px;    height: 50px;    margin-top: 11px;    margin-right: 49px;    margin-left: 12px;    float: left;}
