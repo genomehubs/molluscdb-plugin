@@ -13,10 +13,14 @@ div#wide-footer, div#footer {
   margin-bottom: 0;
 }
 
-/* Keep headers at ensembl in the same position as in downloads and blast */
+/* Keep buttons at ensembl in the same position as in downloads and blast */
 
 div.lb-tools-holder { 
   left: 49px;    
 }
 
-.lb-logo { width: 160px;    height: 50px;    margin-top: 11px;    margin-right: 49px;    margin-left: 12px;    float: left;}
+/* Keep logo at ensembl in the same position as in downloads and blast */
+
+.logo_holder {
+  top: 11px;
+}
