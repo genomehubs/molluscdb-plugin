@@ -15,11 +15,14 @@ div#wide-footer, div#footer {
 
 /* Keep menu on same position as in Blast and Downloads */
 
+/*
 .lb-navbar {
   border-bottom: none;
   background-color: #333333;
   height: 80px;
 }
+*/
+
 div.lb-menu-category {
     float: left;
     margin-left: 4px;
