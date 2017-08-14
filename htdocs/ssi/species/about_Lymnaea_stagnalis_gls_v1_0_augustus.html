@@ -1,0 +1,17 @@
+<!-- {about} --><a name="about"></a>  
+  <p>From Wikipedia: <i>Lymnaea stagnalis</i>, better known as the great pond snail, is a species of large air-breathing freshwater snail, an aquatic pulmonate gastropod mollusc in the family Lymnaeidae.</p>
+  <p>Picture credit: <a href="https://commons.wikimedia.org/wiki/File:Water_snail_Rex_2.jpg">Wikimedia Commons</a></p>
+<!-- {about} -->
+<!-- {assembly} --><a name="assembly"></a>
+  <h2 id="assembly" style="margin-bottom:5px">Assembly</h2>
+  <p>Genome assembly provided by the Blaxter Lab.</p> 
+  <p>Two paired-end (200 and 400 bases insert size; 165,943,096 and 101,468,245 base pairs) and two mate-pair libraries (2,800 and 4,500 bases insert size; 66,964,771 and 71,182,903 base pairs) were generated with Illumina sequencing. Adapters were removed with Cutadapt and low quality bases were trimmed with Trimmomatic. The trimmed reads were error corrected with Quake. Reads were assembled using SOAPdenovo2 with a kmer size of 61 bases. Gaps were filled post-assembly with Gapcloser. The genome was assembled in 997,095,996 bases in 148,229 scaffolds with an N50 of 44,738 bases. To assemble BAC sequences, paired-reads were merged with PEAR. Adapters were removed with Cutadapt and low quality bases were trimmed with Trimmomatic. Reads were mapped to <i>E. coli</i> and vector with Bowtie2 and removed. BACs with high read coverage were subsampled so that each BAC will have almost the same read coverage. All reads were pooled together and were assembled with SPAdes using also the mate pair information from whole genome sequencing libraries. Low coverage scaffolds were identified as mis-assemblies and were removed [1].</p>
+<!-- {assembly} -->
+<!-- {annotation} --><a name="annotation"></a>
+  <h2 id="annotation" style="margin-bottom:5px">Annotation</h2>
+  <p>Two gene sets are provided for this genome assembly: Augustus predictions (78075 genes), and MAKER predictions (9391 genes).</p>
+<!-- {annotation} -->
+<!-- {references} -->
+  <h2>References</h2>
+  <p>&emsp;1. <a href="https://www.ncbi.nlm.nih.gov/pubmed/26923788">Formin Is Associated with Left-Right Asymmetry in the Pond Snail and the Frog</a></p>
+<!-- {references} -->
