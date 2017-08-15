@@ -1,1 +1,1 @@
-Plugin for ensembl.molluscdb.org
+Plugin for molluscdb.org
