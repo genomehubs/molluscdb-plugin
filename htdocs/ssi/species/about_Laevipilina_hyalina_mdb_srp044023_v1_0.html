@@ -1,21 +1,25 @@
 <!-- {about} --><a name="about"></a>
+  <p></p>
   <p>
   (From Wikipedia) <em>Laevipilina hyalina</em> is a species of deep-sea limpet (class Monoplacophora) in the family Laevipilinidae.
   <p>
 <!-- {about} -->
 <!-- {assembly} --><a name="assembly"></a>
+  <p></p>
   <h2 id="assembly" style="margin-bottom:5px">Assembly</h2>
+  <p></p>
   <p>
   Transcriptome assembly produced by the molluscdb team using public data [1]:
   <p></p>
-  Study: <a href="https://trace.ncbi.nlm.nih.gov/Traces/sra/?study=SRP044023">SRP044023</a><br>
-  Selected runs: <a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRR1505115">SRR1505115</a>
+  <p>Study: <a href="https://trace.ncbi.nlm.nih.gov/Traces/sra/?study=SRP044023">SRP044023</a></p>
+  <p>Selected runs: <a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRR1505115">SRR1505115</a></p>
   <p></p>
   The quality of the dataset was first assessed with FastQC v0.11.5 [2]. Then, raw reads were quality and adapter trimmed with BBDuk v36.92 [3] (<font face="monospace">bbduk ... ref=adapters.fa threads=16 ktrim=r k=23 mink=11 hammingdistance=1 ftm=5 tpe tbo qtrim=rl trimq=5 minavgquality=10 minlength=25</font>). Finally, trimmed reads were <i>de novo</i> assembled with Trinity v2.4.0 [4] (<font face="monospace">Trinity --seqType fq --max_memory 128G --CPU 16 --left ... --right ...</font>). 
   </p>
 <!-- {assembly} -->
 <!-- {annotation} --><a name="annotation"></a>
   <h2 id="annotation" style="margin-bottom:5px">Annotation</h2>
+  <p></p>
   <p>
   Transcripts were annotated by the molluscDB team with TransDecoder v3.0.1 [5]. BLASTp v2.6.0+ [6] searches against UniRef90 release 2017_03 (<font face="monospace">blastp -query longest_orfs.pep -db uniref90.fasta -max_target_seqs 1 -outfmt 6 -evalue 1e-5 -out blastp.outfmt6</font>), and hmmscan v3.1b2 [7] searches against Pfam v31.0 (<font face="monospace">hmmscan --cpu 16 --domtblout pfam.domtblout Pfam-A.hmm longest_orfs.pep</font>) were included in the TransDecoder pipeline to maximize sensitivity for capturing ORFs (<font face="monospace">TransDecoder.LongOrfs -t Trinity.fasta; TransDecoder.Predict --cpu 16 --single_best_orf -t Trinity.fasta --retain_pfam_hits pfam.domtblout --retain_blastp_hits blastp.outfmt6</font>).
   </p>
