@@ -1,20 +1,17 @@
 <!-- {about} --><a name="about"></a>
   <p></p>
   <p>
- (From MarLIN) The blue mussel (<em>Mytilus edulis</em>), is a species of edible marine bivalve mollusc in the family Mytilidae. <em>M. edulis</em> occurs from the high intertidal to the shallow subtidal attached by fibrous byssus threads to suitable substrata. It can be found on the rocky shores of open coasts attached to the rock surface and in crevices, and on rocks and piers in sheltered harbours and estuaries, often occurring as dense masses. Its distribution ranges from the White Sea, south to southern France in the N.E. Atlantic. In the W. Atlantic it extends from the Canadian Maritimes south to North Carolina. It occurs on the coasts of Chile, Argentina, the Falkland Islands and the Kerguelen Isles.
+  From Wikipedia: <i>Mya truncata</i>, common name the blunt gaper or truncate softshell, is a species of edible saltwater clam, a marine bivalve mollusc in the family Myidae.
   </p>
 <!-- {about} -->
 <!-- {assembly} --><a name="assembly"></a>
   <p></p>
   <h2 id="assembly" style="margin-bottom:5px">Assembly</h2>
   <p></p>
-  Transcriptome assembly produced by the molluscdb team using public data:
+  <p>Unpublished assembly provided by Victoria A. Sleight (British Antarctic Survey).</p>
   <p></p>
-  <p>Study: <a href="https://trace.ncbi.nlm.nih.gov/Traces/sra/?study=ERP015664">ERP015664</a></p>
-  <p>Selected runs: <a href="https://www.ncbi.nlm.nih.gov/sra/?term=ERR1414443">ERR1414443</a></p>
-  <p></p> 
   <p>
-  The quality of the dataset was first assessed with FastQC v0.11.5 [1]. Then, raw reads were quality and adapter trimmed with BBDuk v36.92 [2] (<font face="monospace">bbduk ... ref=adapters.fa threads=16 ktrim=r k=23 mink=11 hammingdistance=1 ftm=5 tpe tbo qtrim=rl trimq=5 minavgquality=10 minlength=25</font>). Finally, trimmed reads were <i>de novo</i> assembled with Trinity v2.4.0 [3] (<font face="monospace">Trinity --seqType fq --max_memory 128G --CPU 16 --left ... --right ...</font>).
+  The quality of the reads was first assessed with FastQC v0.11.5 [1]. Adapter sequences were trimmed, and low quality and short reads were removed with Fastq-Mcf v1.1.2 [2] (<font face="monospace">fastq-mcf ... -q 30 -l 80 adapters.fa</font>). Cleaned reads were normalised with Trinity's (v2.2.0) [3] in silico read normalisation tool using default parameters. Then, reads were assembled with Trinity v2.2.0 [3] (<font face="monospace">Trinity --seqType fq --max_memory 200G --CPU 16 --left ... --right ... --SS_lib_type RF</font>). Finally, contigs shorter than 300 bp were removed from the assembly.
   </p>
 <!-- {assembly} -->
 <!-- {annotation} --><a name="annotation"></a>
@@ -27,7 +24,7 @@
 <!-- {references} -->
   <h2>References</h2>
   <p>&emsp;1. <a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/"> Babraham Bioinformatics - FastQC A Quality Control tool for High Throughput Sequence Data</a></p>
-  <p>&emsp;2. <a href="http://jgi.doe.gov/data-and-tools/bbtools/"> BBTools software package</a></p>
+  <p>&emsp;2. <a href="https://github.com/ExpressionAnalysis/ea-utils"> ea-utils - FASTQ processing utilities</a></p>
   <p>&emsp;3. <a href="https://www.ncbi.nlm.nih.gov/pubmed/21572440"> Full-length transcriptome assembly from RNA-Seq data without a reference genome</a></p>
   <p>&emsp;4. <a href="https://github.com/TransDecoder/TransDecoder/wiki"> TransDecoder: Find Coding Regions Within Transcripts</a></p>
   <p>&emsp;5. <a href="https://www.ncbi.nlm.nih.gov/pubmed/20003500"> BLAST+: architecture and applications</a></p>

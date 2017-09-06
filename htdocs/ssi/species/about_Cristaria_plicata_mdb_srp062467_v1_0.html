@@ -21,7 +21,7 @@
   <h2 id="annotation" style="margin-bottom:5px">Annotation</h2>
   <p></p>
   <p>
-  Transcripts were annotated by the molluscDB team with TransDecoder v3.0.1 [5]. BLASTp v2.6.0+ [6] searches against UniRef90 release 2017_03 (<font face="monospace">blastp -query longest_orfs.pep -db uniref90.fasta -max_target_seqs 1 -outfmt 6 -evalue 1e-5 -out blastp.outfmt6</font>), and hmmscan v3.1b2 [7] searches against Pfam v31.0 (<font face="monospace">hmmscan --cpu 16 --domtblout pfam.domtblout Pfam-A.hmm longest_orfs.pep</font>) were included in the TransDecoder pipeline to maximize sensitivity for capturing ORFs (<font face="monospace">TransDecoder.LongOrfs -t Trinity.fasta -S; TransDecoder.Predict --cpu 16 --single_best_orf -t Trinity.fasta --retain_pfam_hits pfam.domtblout --retain_blastp_hits blastp.outfmt6</font>).
+  Transcripts were annotated by the molluscDB team with TransDecoder v3.0.1 [5]. BLASTp v2.6.0+ [6] searches against UniRef90 release 2017_03 [7] (<font face="monospace">blastp -query longest_orfs.pep -db uniref90.fasta -max_target_seqs 1 -outfmt 6 -evalue 1e-5 -out blastp.outfmt6</font>), and hmmscan v3.1b2 [8] searches against Pfam v31.0 [9] (<font face="monospace">hmmscan --cpu 16 --domtblout pfam.domtblout Pfam-A.hmm longest_orfs.pep</font>) were included in the TransDecoder pipeline to maximize sensitivity for capturing ORFs (<font face="monospace">TransDecoder.LongOrfs -t Trinity.fasta -S; TransDecoder.Predict --cpu 16 --single_best_orf -t Trinity.fasta --retain_pfam_hits pfam.domtblout --retain_blastp_hits blastp.outfmt6</font>).
   </p>
 <!-- {annotation} -->
 <!-- {references} -->
@@ -32,5 +32,7 @@
   <p>&emsp;4. <a href="https://www.ncbi.nlm.nih.gov/pubmed/21572440"> Full-length transcriptome assembly from RNA-Seq data without a reference genome</a></p>
   <p>&emsp;5. <a href="https://github.com/TransDecoder/TransDecoder/wiki"> TransDecoder: Find Coding Regions Within Transcripts</a></p>
   <p>&emsp;6. <a href="https://www.ncbi.nlm.nih.gov/pubmed/20003500"> BLAST+: architecture and applications.</a></p>
-  <p>&emsp;7. <a href="http://hmmer.org/"> HMMER: biosequence analysis using profile hidden Markov models</a></p>
+  <p>&emsp;7. <a href="https://www.ncbi.nlm.nih.gov/pubmed/25398609"> UniRef clusters: a comprehensive and scalable alternative for improving sequence similarity searches</a></p>
+  <p>&emsp;8. <a href="http://hmmer.org/"> HMMER: biosequence analysis using profile hidden Markov models</a></p>
+  <p>&emsp;9. <a href="https://www.ncbi.nlm.nih.gov/pubmed/26673716"> The Pfam protein families database: towards a more sustainable future</a></p>
 <!-- {references} -->

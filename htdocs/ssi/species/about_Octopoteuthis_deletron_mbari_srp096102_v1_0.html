@@ -1,0 +1,31 @@
+<!-- {about} --><a name="about"></a>
+  <p></p>
+  <p>
+  From Wikipedia: <i>Octopoteuthis deletron</i> is a species of squid in the genus Octopoteuthis of the family Octopoteuthidae. They belong to the pelagic squids of suborder Oegopsina. Found at depths of 400 to 800 m (1,300 to 2,600 ft) in the Pacific Ocean, they have been known to grow to 24 cm (9.4 in). 
+  </p>
+<!-- {about} -->
+<!-- {assembly} --><a name="assembly"></a>
+  <p></p>
+  <h2 id="assembly" style="margin-bottom:5px">Assembly</h2>
+  <p></p>
+  <p>Published transcriptome assembly [1]:
+  <p></p>
+  <p>Study: <a href="https://trace.ncbi.nlm.nih.gov/Traces/sra/?study=SRP096102">SRP096102</a></p>
+  <p>Runs: <a href="https://www.ncbi.nlm.nih.gov/sra/SRX2700330">SRR5527415</a></p>
+<!-- {assembly} -->
+<!-- {annotation} --><a name="annotation"></a>
+  <h2 id="annotation" style="margin-bottom:5px">Annotation</h2>
+  <p></p>
+  <p>
+  Transcripts were annotated by the molluscDB team with TransDecoder v3.0.1 [2]. BLASTp v2.6.0+ [3] searches against UniRef90 release 2017_03 [4] (<font face="monospace">blastp -query longest_orfs.pep -db uniref90.fasta -max_target_seqs 1 -outfmt 6 -evalue 1e-5 -out blastp.outfmt6</font>), and hmmscan v3.1b2 [5] searches against Pfam v31.0 [6] (<font face="monospace">hmmscan --cpu 16 --domtblout pfam.domtblout Pfam-A.hmm longest_orfs.pep</font>) were included in the TransDecoder pipeline to maximize sensitivity for capturing ORFs (<font face="monospace">TransDecoder.LongOrfs -t Trinity.fasta; TransDecoder.Predict --cpu 16 --single_best_orf -t Trinity.fasta --retain_pfam_hits pfam.domtblout --retain_blastp_hits blastp.outfmt6</font>).
+  </p>
+<!-- {annotation} -->
+<!-- {references} -->
+  <h2>References</h2>
+  <p>&emsp;1. <a href="https://www.ncbi.nlm.nih.gov/pubmed/28785521"> Symplectin evolved from multiple duplications in bioluminescent squid</a></p>
+  <p>&emsp;2. <a href="https://github.com/TransDecoder/TransDecoder/wiki"> TransDecoder: Find Coding Regions Within Transcripts</a></p>
+  <p>&emsp;3. <a href="https://www.ncbi.nlm.nih.gov/pubmed/20003500"> BLAST+: architecture and applications</a></p>
+  <p>&emsp;4. <a href="https://www.ncbi.nlm.nih.gov/pubmed/25398609"> UniRef clusters: a comprehensive and scalable alternative for improving sequence similarity searches</a></p>
+  <p>&emsp;5. <a href="http://hmmer.org/"> HMMER: biosequence analysis using profile hidden Markov models</a></p>
+  <p>&emsp;6. <a href="https://www.ncbi.nlm.nih.gov/pubmed/26673716"> The Pfam protein families database: towards a more sustainable future</a></p>
+<!-- {references} -->
