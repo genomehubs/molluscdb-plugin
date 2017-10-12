@@ -8,7 +8,7 @@
   <p></p>
   <h2 id="assembly" style="margin-bottom:5px">Assembly</h2>
   <p></p>
-  <p>This resource is unpublished, please contact Victoria A. Sleight, British Antarctic Survey, before using it.</p>
+  <p>This resource is <font color="red">unpublished</font>, please contact Victoria A. Sleight, British Antarctic Survey, before using it.</p>
   <p></p>
   <p>
   The quality of the reads was first assessed with FastQC v0.11.5 [1]. Adapter sequences were trimmed, and low quality and short reads were removed with Fastq-Mcf v1.1.2 [2] (<font face="monospace">fastq-mcf ... -q 30 -l 80 adapters.fa</font>). Cleaned reads were normalised with Trinity's (v2.2.0) [3] in silico read normalisation tool using default parameters. Then, reads were assembled with Trinity v2.2.0 [3] (<font face="monospace">Trinity --seqType fq --max_memory 200G --CPU 16 --left ... --right ... --SS_lib_type RF</font>). Finally, contigs shorter than 300 bp were removed from the assembly.
