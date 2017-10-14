@@ -50,7 +50,7 @@ sub render_species_list {
   my $html;
   if (@ok_faves){
     my $fav_html = $self->render_with_images(\@ok_faves,\%assemblies);
-    $html = '<div class="static_favourite_species"><h3 class="lb-heading">Genome assemblies with gene models</h3><div class="species_list_container species-list">'.$fav_html.'</div></div>';
+    $html = '<div class="static_favourite_species"><h3 class="lb-heading">Genome assemblies</h3><div class="species_list_container species-list">'.$fav_html.'</div></div>';
   }
 
   return $html;
