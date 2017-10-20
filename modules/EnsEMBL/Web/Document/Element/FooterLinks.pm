@@ -27,8 +27,8 @@ sub content {
 ## BEGIN MDB MODIFICATIONS...
   return qq(
     <div class="twocol-right right">
-      <a href="mailto:molluscdb\@gmail.com" title="molluscdb\@gmail.com"><font size="+1">contact&#64;molluscdb.org</a> |
-      <a href="http://genomehubs.org/" title="genomehubs.org"><font size="+1">genomehubs.org</a> |
+      <a href="mailto:molluscdb\@gmail.com" title="molluscdb\@gmail.com">contact&#64;molluscdb.org</a> |
+      <a href="http://genomehubs.org/" title="genomehubs.org">genomehubs.org</a> |
       <a href="http://www.ensembl.org/" title="ensembl.org"><img style="height:auto;margin-top:-5px;background:none;border:none;" src="/i/empowered.png"></img></a>
     </div>)
   ;
