@@ -12,7 +12,7 @@ limitations under the License.
 =cut
 
 =head1 MODIFICATIONS
-Copyright [2014-2017] University of Edinburgh
+Copyright [2014-2019] University of Edinburgh
 All modifications licensed under the Apache License, Version 2.0, as above.
 =cut
 
@@ -21,6 +21,8 @@ package EnsEMBL::Web::Document::Element::FooterLinks;
 ### Replacement footer links for www.ensembl.org
 
 use strict;
+
+use base qw(EnsEMBL::Web::Document::Element);
 
 sub content {
 

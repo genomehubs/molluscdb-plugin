@@ -12,7 +12,7 @@ limitations under the License.
 =cut
 
 =head1 MODIFICATIONS
-Copyright [2014-2017] University of Edinburgh
+Copyright [2014-2019] University of Edinburgh
 All modifications licensed under the Apache License, Version 2.0, as above.
 =cut
 
@@ -22,18 +22,25 @@ package EnsEMBL::Web::Document::Element::Copyright;
 
 use strict;
 
+use base qw(EnsEMBL::Web::Document::Element);
+
+sub new {
+  return shift->SUPER::new({
+    %{$_[0]},
+    sitename => '?'
+  });
+}
+
+sub sitename :lvalue { $_[0]{'sitename'}; }
+
 sub content {
   my $self = shift;
+  my @time = localtime;
+  my $year = @time[5] + 1900;
+  my $privacy_url  = $self->hub->species_defs->GDPR_POLICY_URL;
 
-  my $sd = $self->species_defs;
+  my $privacy_link = $privacy_url ? qq((<a href="$privacy_url">Privacy policy</a>)) : '';
 
-#  return sprintf( qq(
-#  <div class="column-two left">
-#		   %s release %d - %s
-#		  &copy; <span class="print_hide"><a href="http://www.molluscdb.org/" style="white-space:nowrap">EBI</a></span>
-#      <span class="screen_hide_inline">molluscdb</span>
-#  </div>),     $sd->SITE_NAME, $sd->SITE_RELEASE_VERSION, $sd->SITE_RELEASE_DATE
-#	       );
 ## BEGIN MOLLUSCDB MODIFICATIONS...
 my $site_name = $self->hub->species_defs->ENSEMBL_SITE_NAME_SHORT;
 my $site_version = $self->hub->species_defs->SITE_RELEASE_VERSION;
@@ -51,8 +58,11 @@ $html .= '</div>';
       %s
   </div>),     $site_name, $site_version, $site_date, $site_name, $html
 ## ...END MOLLUSCDB MODIFICATIONS
-	       );
 
+}
+
+sub init {
+  $_[0]->sitename = $_[0]->species_defs->ENSEMBL_SITETYPE;
 }
 
 1;
