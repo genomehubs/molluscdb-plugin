@@ -41,23 +41,30 @@ sub content {
 
   my $privacy_link = $privacy_url ? qq((<a href="$privacy_url">Privacy policy</a>)) : '';
 
-## BEGIN MOLLUSCDB MODIFICATIONS...
-my $site_name = $self->hub->species_defs->ENSEMBL_SITE_NAME_SHORT;
-my $site_version = $self->hub->species_defs->SITE_RELEASE_VERSION;
-my $site_date = $self->hub->species_defs->SITE_RELEASE_DATE;
-my $html = '<div class=lb-ackn-logos>';
-$html .= '<a href="http://www.ed.ac.uk/"><img title="University of Edinburgh" class="lb-footer-logo" src="/img/edinburgh_logo.png"></a>';
-$html .= '<a href="http://www.cache-itn.eu"><img title="CACHE" class="lb-footer-logo" src="/img/cache-icon.jpg"></a>';
+  ## BEGIN MOLLUSCDB MODIFICATIONS...
 
-$html .= '</div>';
+  my $site_name = $self->hub->species_defs->ENSEMBL_SITE_NAME_SHORT;
+  my $site_version = $self->hub->species_defs->SITE_RELEASE_VERSION;
+  my $site_date = $self->hub->species_defs->SITE_RELEASE_DATE;
+  my $html = '<div class=lb-ackn-logos>';
+  $html .= '<a href="http://www.ed.ac.uk/"><img title="University of Edinburgh" class="lb-footer-logo" src="/img/edinburgh_logo.png"></a>';
+  $html .= '<a href="http://www.cache-itn.eu"><img title="CACHE" class="lb-footer-logo" src="/img/cache-icon.jpg"></a>';
 
-  return sprintf( qq(
-  <div class="column-two left">
-		   %s release %s - %s -
-		  %s &copy; <span class="print_hide"><a href="http://www.ed.ac.uk/" style="white-space:nowrap">Edinburgh University</a> / EnsEMBL &copy; <a href="http://www.ebi.ac.uk/" style="white-space:nowrap">EBI</a></span>
-      %s
-  </div>),     $site_name, $site_version, $site_date, $site_name, $html
-## ...END MOLLUSCDB MODIFICATIONS
+  $html .= '</div>';
+
+    return qq{
+      <div class="column-two left">
+        <p>
+          MolluscDB release 2 &copy; $year <span class="print_hide"><a href="http://www.ed.ac.uk/" style="white-space:nowrap">Edinburgh University</a> / EnsEMBL &copy; <a href="http://www.ebi.ac.uk/" style="white-space:nowrap">EBI</a></span>.
+          $privacy_link
+          <br/>
+          EnsEMBL &copy; $year <span class="print_hide"><a href="//www.ebi.ac.uk/" style="white-space:nowrap">EMBL-EBI</a></span>
+          <span class="screen_hide_inline">EMBL-EBI</span>.
+        </p>
+        $html
+      </div>
+    };
+  ## ...END MOLLUSCDB MODIFICATIONS
 
 }
 
