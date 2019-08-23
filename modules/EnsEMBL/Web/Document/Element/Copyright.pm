@@ -55,11 +55,10 @@ sub content {
     return qq{
       <div class="column-two left">
         <p>
-          MolluscDB release 2 &copy; $year <span class="print_hide"><a href="http://www.ed.ac.uk/" style="white-space:nowrap">Edinburgh University</a> / EnsEMBL &copy; <a href="http://www.ebi.ac.uk/" style="white-space:nowrap">EBI</a></span>.
+          MolluscDB release 2 &copy; $year <span class="print_hide"><a href="http://www.ed.ac.uk/" style="white-space:nowrap">Edinburgh University</a></span>.
           $privacy_link
           <br/>
-          EnsEMBL &copy; $year <span class="print_hide"><a href="//www.ebi.ac.uk/" style="white-space:nowrap">EMBL-EBI</a></span>
-          <span class="screen_hide_inline">EMBL-EBI</span>.
+          EnsEMBL &copy; $year <span class="print_hide"><a href="//www.ebi.ac.uk/" style="white-space:nowrap">EMBL-EBI</a></span>.
         </p>
         $html
       </div>
