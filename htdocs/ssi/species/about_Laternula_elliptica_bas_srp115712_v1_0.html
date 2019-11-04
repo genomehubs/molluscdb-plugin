@@ -1,34 +1,26 @@
 <!-- {about} --><a name="about"></a>
   <p></p>
-  <p>
-  From Wikipedia: <i>Laternula elliptica</i> is a species of saltwater clam, a marine bivalve mollusc in the family Laternulidae, the lantern shells. It is the largest bivalve found under the surface of the seabed in the Southern Ocean.
-  </p>
+  <p>From Wikipedia: <i>Laternula elliptica</i> is a species of saltwater clam, a marine bivalve mollusc in the family Laternulidae, the lantern shells. It is the largest bivalve found under the surface of the seabed in the Southern Ocean.</p>
 <!-- {about} -->
 <!-- {assembly} --><a name="assembly"></a>
   <p></p>
   <h2 id="assembly" style="margin-bottom:5px">Assembly</h2>
   <p></p>
-  <p>This resource is <font color="red">unpublished</font>, please contact Victoria A. Sleight, British Antarctic Survey, before using it.</p>
+  Published transcriptome assembly [1]: 
   <p></p>
-  <p>
-  The quality of the reads was first assessed with FastQC v0.11.5 [1]. Adapter sequences were trimmed, and low quality and short reads were removed with Fastq-Mcf v1.1.2 [2] (<font face="monospace">fastq-mcf ... -q 30 -l 80 adapters.fa</font>). Cleaned reads were normalised with Trinity's (v2.2.0) [3] in silico read normalisation tool using default parameters. Then, reads were assembled with Trinity v2.2.0 [3] (<font face="monospace">Trinity --seqType fq --max_memory 200G --CPU 16 --left ... --right ... --SS_lib_type RF</font>). Finally, contigs shorter than 300 bp were removed from the assembly.
-  </p>
+  <p>Study: <a href="https://trace.ncbi.nlm.nih.gov/Traces/sra/?study=SRP115712">SRP115712</a></p>
 <!-- {assembly} -->
 <!-- {annotation} --><a name="annotation"></a>
   <h2 id="annotation" style="margin-bottom:5px">Annotation</h2>
   <p></p>
-  <p>
-  Transcripts were annotated by the MolluscDB team with TransDecoder v3.0.1 [4]. BLASTp v2.6.0+ [5] searches against UniRef90 release 2017_03 [6] (<font face="monospace">blastp -query longest_orfs.pep -db uniref90.fasta -max_target_seqs 1 -outfmt 6 -evalue 1e-5 -out blastp.outfmt6</font>), and hmmscan v3.1b2 [7] searches against Pfam v31.0 [8] (<font face="monospace">hmmscan --cpu 16 --domtblout pfam.domtblout Pfam-A.hmm longest_orfs.pep</font>) were included in the TransDecoder pipeline to maximize sensitivity for capturing ORFs (<font face="monospace">TransDecoder.LongOrfs -t Trinity.fasta; TransDecoder.Predict --cpu 16 --single_best_orf -t Trinity.fasta --retain_pfam_hits pfam.domtblout --retain_blastp_hits blastp.outfmt6</font>).
-  </p>
+  <p>Transcripts were annotated by the MolluscDB team with TransDecoder v3.0.1 [2]. BLASTp v2.6.0+ [3] searches against UniRef90 release 2017_03 [4] (<font face="monospace">blastp -query longest_orfs.pep -db uniref90.fasta -max_target_seqs 1 -outfmt 6 -evalue 1e-5 -out blastp.outfmt6</font>), and hmmscan v3.1b2 [5] searches against Pfam v31.0 [6] (<font face="monospace">hmmscan --cpu 16 --domtblout pfam.domtblout Pfam-A.hmm longest_orfs.pep</font>) were included in the TransDecoder pipeline to maximize sensitivity for capturing ORFs (<font face="monospace">TransDecoder.LongOrfs -t Trinity.fasta; TransDecoder.Predict --cpu 16 --single_best_orf -t Trinity.fasta --retain_pfam_hits pfam.domtblout --retain_blastp_hits blastp.outfmt6</font>).</p>
 <!-- {annotation} -->
 <!-- {references} -->
   <h2>References</h2>
-  <p>&emsp;1. <a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/"> Babraham Bioinformatics - FastQC A Quality Control tool for High Throughput Sequence Data</a></p>
-  <p>&emsp;2. <a href="https://github.com/ExpressionAnalysis/ea-utils"> ea-utils - FASTQ processing utilities</a></p>
-  <p>&emsp;3. <a href="https://www.ncbi.nlm.nih.gov/pubmed/21572440"> Full-length transcriptome assembly from RNA-Seq data without a reference genome</a></p>
-  <p>&emsp;4. <a href="https://github.com/TransDecoder/TransDecoder/wiki"> TransDecoder: Find Coding Regions Within Transcripts</a></p>
-  <p>&emsp;5. <a href="https://www.ncbi.nlm.nih.gov/pubmed/20003500"> BLAST+: architecture and applications</a></p>
-  <p>&emsp;6. <a href="https://www.ncbi.nlm.nih.gov/pubmed/25398609"> UniRef clusters: a comprehensive and scalable alternative for improving sequence similarity searches</a></p>
-  <p>&emsp;7. <a href="http://hmmer.org/"> HMMER: biosequence analysis using profile hidden Markov models</a></p>
-  <p>&emsp;8. <a href="https://www.ncbi.nlm.nih.gov/pubmed/26673716"> The Pfam protein families database: towards a more sustainable future</a></p>
+  <p>&emsp;1. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=Computationally+Predicted+Gene+Regulatory+Networks+in+Molluscan+Biomineralisation+Identify+Extracellular+Matrix+Production+and+Ion+Transportation+Pathways"> Computationally Predicted Gene Regulatory Networks in Molluscan Biomineralisation Identify Extracellular Matrix Production and Ion Transportation Pathways</a></p>
+  <p>&emsp;2. <a href="https://github.com/TransDecoder/TransDecoder/wiki"> TransDecoder: Find Coding Regions Within Transcripts</a></p>
+  <p>&emsp;3. <a href="https://www.ncbi.nlm.nih.gov/pubmed/20003500"> BLAST+: architecture and applications</a></p>
+  <p>&emsp;4. <a href="https://www.ncbi.nlm.nih.gov/pubmed/25398609"> UniRef clusters: a comprehensive and scalable alternative for improving sequence similarity searches</a></p>
+  <p>&emsp;5. <a href="http://hmmer.org/"> HMMER: biosequence analysis using profile hidden Markov models</a></p>
+  <p>&emsp;6. <a href="https://www.ncbi.nlm.nih.gov/pubmed/26673716"> The Pfam protein families database: towards a more sustainable future</a></p>
 <!-- {references} -->
