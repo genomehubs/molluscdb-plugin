@@ -296,7 +296,7 @@ sub content_panel {
     <div class="species-badge" style="padding: 0px 16px 16px 16px">';
 
   	$species_badge .= qq(<img src="${img_url}species/64/$species.png" alt="" title="" />);
-
+    $species_badge .= qq(<h1>$common_name</h1><p>$display_name</p>);
     $species_badge .= '<p class="taxon-id">';
   	$species_badge .= 'Data Source ' . $provider_link if $provider_link;
   	$species_badge .= sprintf q{Taxonomy ID %s}, $hub->get_ExtURL_link("$taxid", 'UNIPROT_TAXONOMY', $taxid) if $taxid;
