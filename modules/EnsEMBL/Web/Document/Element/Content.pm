@@ -19,7 +19,8 @@ limitations under the License.
 
 =head1 MODIFICATIONS
 
-Copyright [2018] University of Edinburgh
+Copyright [2018-2019] University of Edinburgh
+Copyright [2019] Wellcome Trust Sanger Institute
 
 All modifications licensed under the Apache License, Version 2.0, as above.
 
@@ -258,18 +259,26 @@ sub content_panel {
   $panel->add_components(@components);
   $self->add_panel($panel);
 
-## Begin GenomeHubs Modifications
+## Begin MolluscDB Modifications
   $hub          = $self->hub;
   my $species      = $hub->species;
   my $species_defs = $hub->species_defs;
   my $img_url      = $self->img_url;
+  my $species_url  = $species_defs->SPECIES_URL;
   my $common_name  = $species_defs->SPECIES_COMMON_NAME;
   my $display_name = $species_defs->SPECIES_SCIENTIFIC_NAME.' '.$species_defs->ASSEMBLY_NAME;
   $display_name =~ s/_/ /g;
   my $taxid        = $species_defs->TAXONOMY_ID;
   my $provider_link;
-  my %transcriptomes = map { $_ => 1 } = @{$hub->get_species_set('SPECIES_GROUP_B')}
-
+  my $is_transcriptome = 0;
+  if ($species_defs->TRANSCRIPTOME_ONLY && ref $species_defs->TRANSCRIPTOME_ONLY eq 'ARRAY') {
+    foreach my $tome_url (@{$species_defs->TRANSCRIPTOME_ONLY}){
+      if ($tome_url eq $species_url){
+        $is_transcriptome = 1;
+        last;
+      }
+    }
+  }
   if ($species_defs->PROVIDER_NAME && ref $species_defs->PROVIDER_NAME eq 'ARRAY') {
     my @providers;
     push @providers, map { $hub->make_link_tag(text => $species_defs->PROVIDER_NAME->[$_], url => $species_defs->PROVIDER_URL->[$_]) } 0 .. scalar @{$species_defs->PROVIDER_NAME} - 1;
@@ -288,21 +297,16 @@ sub content_panel {
 
   	$species_badge .= qq(<img src="${img_url}species/64/$species.png" alt="" title="" />);
 
-  	if ($transcriptomes{$species}){#$common_name =~ /\./) {
-   		$species_badge .= qq(<h1 style="color:#64a02c">$display_name</h1>);
-  	}
-  	else {
-  	  $species_badge .= qq(<h1>$common_name</h1><p>$display_name</p>);
-  	}
-  	$species_badge .= '<p class="taxon-id">';
+    $species_badge .= '<p class="taxon-id">';
   	$species_badge .= 'Data Source ' . $provider_link if $provider_link;
   	$species_badge .= sprintf q{Taxonomy ID %s}, $hub->get_ExtURL_link("$taxid", 'UNIPROT_TAXONOMY', $taxid) if $taxid;
-    $species_badge .= ' | transcriptome assembly' if $transcriptomes{$species};
+  	$species_badge .= ' | ' if $taxid && $is_transcriptome;
+  	$species_badge .= qq(<span style="background-color:#64a02c;color:white;padding:0 0.3em 0.1em 0.3em;">Transcriptome Assembly</span>) if $is_transcriptome;
   	$species_badge .= '</p>';
   	$species_badge .= '</div>'; #species-badge
   	$self->add_panel_first(EnsEMBL::Web::Document::Panel->new(raw => $species_badge));
   }
-## End GenomeHubs Modifications
+## End MolluscDB Modifications
 
 }
 
