@@ -30,7 +30,7 @@ sub content {
   return qq(
     <div class="twocol-right right">
       <a href="mailto:molluscdb\@gmail.com" title="molluscdb\@gmail.com">contact&#64;molluscdb.org</a> |
-      <a href="https://github.com/genomehubs/molluscdb-plugin/" title="report issue">report issue</a> |
+      <a href="https://github.com/genomehubs/molluscdb-plugin/issues" title="report issue">report issue</a> |
       <a href="https://genomehubs.org/" title="genomehubs.org">genomehubs.org</a> |
       <a href="http://www.ensembl.org/" title="ensembl.org"><img style="height:auto;margin-top:-5px;background:none;border:none;" src="/i/empowered.png"></img></a>
     </div>)
