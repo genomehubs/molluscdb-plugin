@@ -48,7 +48,7 @@ sub content {
   my $site_date = $self->hub->species_defs->SITE_RELEASE_DATE;
   my $html = '<div class=lb-ackn-logos>';
   $html .= '<a href="http://www.ed.ac.uk/"><img title="University of Edinburgh" class="lb-footer-logo" src="/img/edinburgh_logo.png"></a>';
-  $html .= '<a href="http://www.cache-itn.eu"><img title="CACHE" class="lb-footer-logo" src="/img/cache-icon.jpg"></a>';
+  $html .= '<a href="https://www.bas.ac.uk/project/cache-itn"><img title="CACHE" class="lb-footer-logo" src="/img/cache-icon.jpg"></a>';
 
   $html .= '</div>';
 
