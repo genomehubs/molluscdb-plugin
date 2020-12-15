@@ -32,7 +32,7 @@ sub content {
       <a href="mailto:molluscdb\@gmail.com" title="molluscdb\@gmail.com">contact&#64;molluscdb.org</a> |
       <a href="https://github.com/genomehubs/molluscdb-plugin/issues" title="report issue">report issue</a> |
       <a href="https://genomehubs.org/" title="genomehubs.org">genomehubs.org</a> |
-      <a>Icons credit: </a><a href="https://academic.oup.com/sysbio/article/64/3/384/1630492" title="icons-credit">Julia Sigwart</a> |
+      <a href="https://academic.oup.com/sysbio/article/64/3/384/1630492" title="icons-credit">Icons credit: Julia Sigwart</a> |
       <a href="http://www.ensembl.org/" title="ensembl.org"><img style="height:auto;margin-top:-5px;background:none;border:none;" src="/i/empowered.png"></img></a>
     </div>)
   ;
