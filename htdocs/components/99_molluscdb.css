@@ -20,20 +20,26 @@ div.lb-menu-category {
   float: left;
   height: 22px;
   margin: 6px 0 0 8px;
+  background-color: [[PAGE_BG]];
   padding: 5px;
   border: none;
+  border-radius: 4px;
+  color: [[MH_BG]];
   line-height: 22px;
   font-size: 16px;
   font-family: Helvetica, arial, sans-serif;
 }
 
-div.lb-menu-category:hover {
+a div.lb-menu-category:hover {
   border: none;
 }
 
 div.lb-tools-holder {
-  padding-top: 24px;
   left: 49px;
+  padding-top: 24px;
+  position: absolute;
+  width: 500px;
+  top: 11px;
 }
 
 /* Keep logo at ensembl in the same position as in downloads and blast */
