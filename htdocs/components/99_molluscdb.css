@@ -5,7 +5,8 @@
   padding-bottom: 200px;
 }
 
-div#wide-footer, div#footer {
+div#wide-footer,
+div#footer {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -15,10 +16,28 @@ div#wide-footer, div#footer {
 
 /* Keep buttons at ensembl in the same position as in downloads and blast */
 
-div.lb-tools-holder { 
-  left: 49px;    
+div.lb-menu-category {
+  float: left;
+  height: 22px;
+  margin: 6px 0 0 8px;
+  padding: 5px;
+  border: none;
+  line-height: 22px;
+  font-size: 16px;
+  font-family: Helvetica, arial, sans-serif;
+}
+
+div.lb-menu-category:hover {
+  border: none;
+}
+
+div.lb-tools-holder {
+  padding-top: 24px;
+  left: 49px;
 }
 
 /* Keep logo at ensembl in the same position as in downloads and blast */
 
-#masthead .logo_holder { top: 11px;}
+#masthead .logo_holder {
+  top: 11px;
+}
