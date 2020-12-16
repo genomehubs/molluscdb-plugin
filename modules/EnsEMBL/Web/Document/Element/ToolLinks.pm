@@ -46,8 +46,8 @@ sub links {
   my $help_url = $self->hub->species_defs->HELP_URL;
   push @links,   '<a href="'.$browser_url.'" title="Browser"><div class="lb-menu-category">Browser</div></a>';
   push @links,   '<a href="'.$blast_url.'" title="Blast"><div class="lb-menu-category">Blast</div></a>';
-  push @links,   '<a href="'.$download_url.'" title="Download"><div class="lb-menu-category">Download</a>';
-  push @links,   '<a href="'.$help_url.'" title="Help"><div class="lb-menu-category"><img title="help" src="/i/help-icon.png" class="lb-menu-linkicon"/>Help</div></a>';
+  push @links,   '<a href="'.$download_url.'" title="Download"><div class="lb-menu-category">Download</div></a>';
+  push @links,   '<a href="'.$help_url.'" title="Help"><div class="lb-menu-category">Help</div></a>';
 
   return \@links;
 }
