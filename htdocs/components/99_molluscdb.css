@@ -20,23 +20,24 @@ div.lb-menu-category {
   float: left;
   height: 22px;
   margin: 6px 0 0 8px;
-  background-color: [[PAGE_BG]];
+  background: none;
   padding: 5px;
   border: none;
   border-radius: 4px;
-  color: [[MH_BG]];
+  color: [[PAGE_BG]];
   line-height: 22px;
   font-size: 16px;
   font-family: Helvetica, arial, sans-serif;
+  font-weight: normal;
 }
 
 a div.lb-menu-category:hover {
   border: none;
+  color: [[MH_HOVER]];
 }
 
 div.lb-tools-holder {
   left: 49px;
-  padding-top: 24px;
   position: absolute;
   width: 500px;
   top: 11px;
