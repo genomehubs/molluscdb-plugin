@@ -40,11 +40,17 @@ div.lb-tools-holder {
   left: 49px;
   position: absolute;
   width: 500px;
-  top: 11px;
+  top: 22px;
 }
 
 /* Keep logo at ensembl in the same position as in downloads and blast */
 
 #masthead .logo_holder {
   top: 11px;
+}
+
+/* Keep buttons at ensembl in the same position as in downloads and blast */
+
+#masthead .tools_holder {
+  top: 0px !important;
 }
